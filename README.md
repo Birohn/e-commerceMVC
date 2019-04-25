@@ -22,6 +22,11 @@ $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 ```
 Do not use md5 or SHA-256 as they are now vulnerable.
 
+#### Further Reading
+* [PHP cyrpt() and salting](https://stackoverflow.com/questions/20368038/crypt-salt-generation-and-password-encryption-well-executed)
+* [PHP password_hash()](https://php.net/manual/en/function.password-hash.php)
+* [SHA1 vs MD5 vs SHA256](https://stackoverflow.com/questions/2235158/sha1-vs-md5-vs-sha256-which-to-use-for-a-php-login)
+
 ## Built With
 * PHP 7
 * HTML5
