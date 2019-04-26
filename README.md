@@ -26,6 +26,7 @@ Do not use md5 or SHA-256 as they are now vulnerable.
 * [PHP cyrpt() and salting](https://stackoverflow.com/questions/20368038/crypt-salt-generation-and-password-encryption-well-executed)
 * [PHP password_hash()](https://php.net/manual/en/function.password-hash.php)
 * [SHA1 vs MD5 vs SHA256](https://stackoverflow.com/questions/2235158/sha1-vs-md5-vs-sha256-which-to-use-for-a-php-login)
+* [B_CRYPT or Blowfish cipher](https://en.wikipedia.org/wiki/Blowfish_(cipher))
 
 ## Built With
 * PHP 7
