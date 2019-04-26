@@ -14,7 +14,15 @@ $dBUsername = "root";
 $dBPassword = "yourDatabasePassword";
 $dBName = "YourDatabaseName";
 ```
-
+You will also need to create the DB and Customer table before running the PHP code.
+```
+CREATE TABLE users (
+    idUsers INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    uidUsers TINYTEXT NOT NULL,
+    emailUsers TINYTEXT NOT NULL,
+    pwdUsers LONGTEXT NOT NULL
+);
+```
 ### B_CRYPT secured password hashing
 This website has the passwords hashed using the latest version of B_CRYPT. 
 ```
