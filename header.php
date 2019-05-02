@@ -27,6 +27,8 @@ session_start();
                             echo '<form action="includes/logout.inc.php">
                             <button class="myButton" type="submit" name="logout-submit">Logout</button>
                         </form>';
+						//Cart Button
+						echo'<a href="checkout.php"><img src="images/shopping_cart.png" class="shopping-cart"></a>';
                         }
                         else {
                             echo '<form action="includes/login.inc.php" method="post">

@@ -23,6 +23,19 @@ CREATE TABLE users (
     pwdUsers LONGTEXT NOT NULL
 );
 ```
+Table for Flights in DB
+```
+CREATE TABLE flights {
+	flightId INT(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	currentPosition TINYTEXT NOT NULL,
+	currentDestination TINYTEXT NOT NULL,
+	date DATETIME NOT NULL,
+	capacity INT(3) NOT NULL,
+	cost DOUBLE NOT NULL
+);
+
+}
+```
 ### B_CRYPT secured password hashing
 This website has the passwords hashed using the latest version of B_CRYPT. 
 ```
