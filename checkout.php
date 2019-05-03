@@ -1,5 +1,6 @@
 <?php
 require "header.php";
+require "includes/dbh.inc.php";
 ?>
 <!-- For all of the placeholder's, we can use the information from the dB. For now, its just test data-->
 <div class="checkout-box">
@@ -34,12 +35,9 @@ require "header.php";
 
             <div class="col-50">
                 <h3>Payment</h3>
-                <label class="checkout-label" for="fname">Accepted Cards</label>
-                <div class="icon-container">
-                <i class="fa fa-cc-visa" style="color:navy;"></i>
-                <i class="fa fa-cc-amex" style="color:blue;"></i>
-                <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                <label class="checkout-label" for="fname">Card Type</label>
+                <div class="icon-container" id="icon-container">
+                
                 </div>
                 <label class="checkout-label" for="cname">Name on Card</label>
                 <input class="checkout" type="text" id="cname" name="cardname" placeholder="Place info from dB">
@@ -71,13 +69,21 @@ require "header.php";
     <div class="col-25">
         <div class="container">
             <!-- we need to display infromation from the database here, rn its just test data-->
-        <h4>Cart *DEMO, GET FORM DB*<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-        <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-        <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-        <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-        <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-        <hr>
-        <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+        <h4>Your Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+       <?php 
+		if(isset($_SESSION['totalCost'])) {
+			foreach($_SESSION['shoppingCart'] as $items ) {
+				echo 'ID:'.$items["flight Id"]. ' qty:' . $items["amount"].' cost:'.$items["cost"].'<br>';
+			}
+			echo' <hr> <p>Total <span class="price" style="color:black"><b>$'.$_SESSION['totalCost'].'</b></span></p>';
+			
+		}
+		else {
+			echo'Your Cart Is Empty.';
+			echo' <hr> <p>Total <span class="price" style="color:black"><b>$0</b></span></p>';
+		}
+	   ?>
+       
         </div>
     </div>
     </div>
