@@ -34,12 +34,9 @@ require "header.php";
 
             <div class="col-50">
                 <h3>Payment</h3>
-                <label class="checkout-label" for="fname">Accepted Cards</label>
-                <div class="icon-container">
-                <i class="fa fa-cc-visa" style="color:navy;"></i>
-                <i class="fa fa-cc-amex" style="color:blue;"></i>
-                <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                <label class="checkout-label" for="fname">Card Type</label>
+                <div class="icon-container" id="icon-container">
+                
                 </div>
                 <label class="checkout-label" for="cname">Name on Card</label>
                 <input class="checkout" type="text" id="cname" name="cardname" placeholder="Place info from dB">

@@ -269,7 +269,13 @@ img.shopping-cart{
 	margin-bottom: 20px;
 	padding: 7px 0;
 	font-size: 24px;
-  }
+	}
+	
+	.card-icon {
+		height: 40px;
+		width: 40px;
+		
+	}
   
   .btn {
 	background-color: #4CAF50;
