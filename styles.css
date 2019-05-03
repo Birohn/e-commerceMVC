@@ -46,6 +46,15 @@ table, th, td {
 table {
 	width: 100%;
 }
+table.shopping-cart {
+	width:70%;
+	border: 1px solid green;
+	margin:auto;
+}
+table.shopping-cart > td {
+	border:1px solid red;
+	
+}
 .flight-selection {
 	background-color:#7eb282;
 	display:inline-block;
